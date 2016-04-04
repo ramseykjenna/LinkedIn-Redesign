@@ -5,9 +5,9 @@
 <!DOCTYPE html>
 <html>
 
-  <!--This include tag adds /_includes/head.html to every page that has layout: default in the front matter -->
+<!--This include tag adds /_includes/head.html to every page that has layout: default in the front matter -->
 
-  <head>
+<head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,8 +19,8 @@
 </head>
 
 
-  <body>
-    
+<body>
+
     <!--This include tag adds /_includes/header.html to every page that has layout: default in the front matter -->
     <header class="site-header">
 
@@ -29,40 +29,69 @@
 ='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
 <div class="header-nav">
 	<div class="search">
+        <div><i class="material-icons">search</i></div>
 	    
 	</div>
 </div>
 </header>
 
 
-      <div class="wrapper">
+    <div class="wrapper">
         <!--Any content underneath the front matter in a page that has layout: default will be inserted here-->
-        
-        <div class="main-card"></div>
-      
-            
-            <div class="card">
-                <div class="tabs">
-                    <div class="tab"><span>Jobs</span></div>
-                    <div class="tab"><span>People</span></div>
-                    <div class="tab"><span>Following</span></div>
-                    <div class="tab"><span>Events</span></div>
-                </div>
-                <div class="people"></div>
-                <div class="people"></div>
-                <div class="people"></div>
-                <div class="view-more">
-                    <a href="#">View More</a>
-                </div>
-            </div>
-           
-     
-        
-        
 
-        
-      </div>
-    
+        <div class="main-card">
+            <div class="main-image">
+                <img src="/images/Screen%20Shot%202016-04-03%20at%204.19.00%20PM.png">
+            </div>
+            <div class="main-text"></div>
+            <div class="main-icons"></div>
+        </div>
+
+
+        <div class="card">
+            <div class="tabs">
+                <div class="tab"><span>Jobs</span></div>
+                <div class="tab"><span>People</span></div>
+                <div class="tab"><span>Following</span></div>
+                <div class="tab"><span>Events</span></div>
+            </div>
+            <div class="people">
+                <div class="person-image">
+                <img src="/images/DavidLI.jpg"></div>
+                <div class="person-text">
+                <p>David Ramsey</p>
+                <p>Developer at Atlas Wearables</p>
+                <p>University of Central Florida</p>
+                </div>
+                <div class="person-icons"></div>
+                <div class="person-connections"></div>
+            </div>
+            <div class="people">
+                <div class="person-image">
+                <img src="/images/KathrynLI.jpg"></div>
+                <div class="person-text"></div>
+                <div class="person-icons"></div>
+                <div class="person-connections"></div>
+            </div>
+            <div class="people">
+                <div class="person-image">
+                <img src="/images/Screen%20Shot%202016-04-03%20at%208.19.45%20PM.png"></div>
+                <div class="person-text"></div>
+                <div class="person-icons"></div>
+                <div class="person-connections"></div>
+            </div>
+            <div class="view-more">
+                <a href="#">View More</a>
+            </div>
+        </div>
+
+
+
+
+
+
+    </div>
+
     <!--This include tag adds /_includes/footer.html to every page that has layout: default in the front matter -->
     <footer>
 <div class="footer">
@@ -82,6 +111,6 @@
 </footer>
 
 
-  </body>
+</body>
 
 </html>
