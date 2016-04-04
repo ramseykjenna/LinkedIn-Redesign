@@ -2,9 +2,8 @@
 # Only the main Sass file needs front matter (the dashes are enough) 
 ---
 
-@import 'type2',
+    @import 'type2',
 'colors2';
-
 // - - - - - - - - - - Mixins - - - - - - - - - //
 @mixin centerer($position:relative) {
     position: $position;
@@ -21,123 +20,147 @@
 
 @mixin h-center($position:relative) {
     position: $position;
-    left: 50%;
-    transform: translateX(-50%);
+    margin: 0 auto;
 }
 
 //-------------------------Global Styles---------------------//
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    margin: 0 auto;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     background-color: $background;
     position: relative;
-    .main-card { 
-        background:#FFF;
-        border:1px solid #AAA;
-        border-bottom:3px solid #BBB;
-        padding:0px;
-        margin:15px;
-        overflow:hidden;
-        height: 15em;
-        width: 80%;
-        max-width: 960px;
-        margin-top: 2em;
-        margin-bottom: 0;
-        @include h-center;
-        border-radius: 5px;
-        .main-image {
-            height: auto;
+}
+
+.main-card {
+    background: #FFF;
+    border: 1px solid #AAA;
+    border-bottom: 3px solid #BBB;
+    padding: 0px;
+    margin: 15px;
+    overflow: hidden;
+    max-width: 960px;
+    margin-top: 2em;
+    margin-bottom: 0;
+    @include h-center;
+    border-radius: 5px;
+    height: auto;
+    .main-text {
+        float: left;
+        h1 {
+            color: $secondary;
+        }
+        p {
+            color: $secondary;
+        }
+        a {
+            text-decoration: none;
+            color: $linked-blue;
+        }
+    }
+    .main-image {
+        float: left;
+        height: auto;
+        width: auto;
+        padding: 1em;
+        img {
+            height: 12em;
             width: auto;
-            padding: 1em;
-            img {
-                height: 12em;
-                width: auto;
-            }
-            
         }
     }
-   
-        
-        
-        .card {
-            background:#FFF;
-            border:1px solid #AAA;
-            border-bottom:3px solid #BBB;
-            padding:0px;
-            margin:15px;
-            overflow:hidden;
-            height: auto;
-            width: 80%;
-            margin-top: 2em;
-            @include h-center;
-            border-radius: 5px;
-            .people {
-                width: 100%;
-                height: auto;
-                border-bottom: 1px solid $background;
-                .person-image { 
-                    height: auto;
-                    width: auto;
-                    padding: 1em;
-                    display: inline-block;
-                    
-                    img {
-                        height: 8em;
-                        width: auto;
-                    }
-            }
-                .person-text {
-                        
-                        
-                        p {
-                            float: right;
-                            display: inline-block;
-                        
-                    }
-                    }
-                }
-            }
-            .view-more {
-                width: 100%;
-                height: 2em;
-                border-bottom-left-radius: 5px;
-                border-bottom-right-radius: 5px;
-                position: relative;
-                a {
-                    @include centerer(absolute);
-                    color: $secondary;
-                    margin: 0;
-                    text-decoration: none;
-                    
-                    
-                }
-            }
-            .tabs {
-            background-color: $secondary;
-            width: 100%;
-            height: 3em;
-            border-top-left-radius: 5px;
-            border-top-right-radius: 5px;
-            border-bottom: .5em solid $background;
+}
+
+.card {
+    background: #FFF;
+    border: 1px solid #AAA;
+    border-bottom: 3px solid #BBB;
+    padding: 0px;
+    margin: 15px;
+    overflow: hidden;
+    height: auto;
+    margin-top: 2em;
+    @include h-center;
+    border-radius: 5px;
+    .tabs {
+        background-color: $secondary;
+        width: 100%;
+        height: 3em;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        border-bottom: .5em solid $background;
+        position: relative;
+        .tab {
+            display: inline-block;
+            color: white;
+            width: 24.5%;
+            height: 100%;
             position: relative;
-            .tab {
-                    display: inline-block;
-                    color: white;
-                    width: 24.5%;
-                    height: 100%;
-                    position: relative;
-                    span {
-                        @include centerer(absolute);
-                    
-                    }
-                }
-          
-            
+            span {
+                @include centerer(absolute);
+            }
         }
     }
+}
+.people {
+    width: 100%;
+    border-bottom: 1px solid $background;
+    overflow: hidden;
+    .person-image {
+        padding: 1em;
+        float: left;
+        width: 20%;
+        img {
+            width: 100%;
+        }
+    }
+    .person-text {
+        float: left;
+        h1 {
+            color: $secondary;
+        }
+        p {
+            color: $secondary;
+        }
+        a {
+            text-decoration: none;
+            color: $linked-blue;
+        }
+    }
+}
 
 
-footer{
+
+
+.view-more {
+    width: 100%;
+    height: 2em;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    position: relative;
+    a {
+        @include centerer(absolute);
+        color: $secondary;
+        margin: 0;
+        text-decoration: none;
+    }
+}
+footer {
     .footer {
         width: 50%;
         @include h-center;
@@ -148,26 +171,24 @@ footer{
             float: left;
             width: 24.5%;
             height: 100%;
-        a {
-            text-decoration: none;
-            color: $secondary;
-            @include centerer(absolute);
-            white-space: nowrap;
-         
+            a {
+                text-decoration: none;
+                color: $secondary;
+                @include centerer(absolute);
+                white-space: nowrap;
             }
-        
-        
+        }
     }
 }
-
-}
-
+    
 .header-nav {
     background-color: $primary;
     width: 100%;
     height: 3em;
     color: $secondary;
     position: relative;
+    overflow: hidden;
+   
     .search {
         background-color: white;
         opacity: .5;
@@ -176,4 +197,28 @@ footer{
         border-radius: 5px;
         @include centerer;
     }
+    .logo {
+        float: left;
+        width: 2em;
+        margin: .5em;
+   
+}
+
+.menu {
+    color: $secondary;
+    float: left;
+    width: 2em;
+    margin .5em;
+}
+
+
+}
+
+
+
+@media (min-width: 900px) {
+    .wrapper {
+        width: 80%;
+    }
+
 }
