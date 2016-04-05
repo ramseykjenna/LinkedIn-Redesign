@@ -65,9 +65,14 @@ body {
         float: left;
         h1 {
             color: $secondary;
+            margin-top: 1em;
         }
-        p {
+        h4 {
             color: $secondary;
+        }
+        h5 {
+            color: $secondary;
+            opacity: .5;
         }
         a {
             text-decoration: none;
@@ -131,15 +136,29 @@ body {
     }
     .person-text {
         float: left;
-        h1 {
+        h2 {
+            color: $secondary;
+            margin-top: 1em;
+        }
+        h4 {
             color: $secondary;
         }
-        p {
+        h5 {
             color: $secondary;
+            opacity: .5;
         }
         a {
             text-decoration: none;
             color: $linked-blue;
+        }
+    }
+    .person-icons {
+        float: right;
+        margin-right: 2em;
+        .material-icons {
+            color: $linked-blue;
+            margin-right: .5em;
+            margin-top: 1em;
         }
     }
 }
@@ -196,6 +215,10 @@ footer {
         height: 1.75em;
         border-radius: 5px;
         @include centerer;
+        position: relative;
+        .search-icon {
+            position: absolute;
+        }
     }
     .logo {
         float: left;
@@ -204,11 +227,17 @@ footer {
    
 }
 
-.menu {
-    color: $secondary;
-    float: left;
-    width: 2em;
-    margin .5em;
+    .menu {
+        color: $secondary;
+        float: left;
+        width: 2em;
+        margin: 1em;
+      
+}
+    .icons {
+        color: $secondary;
+        float: right;
+        width: 25%;
 }
 
 

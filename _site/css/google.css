@@ -39,9 +39,13 @@ body {
   .main-card .main-text {
     float: left; }
     .main-card .main-text h1 {
+      color: #808080;
+      margin-top: 1em; }
+    .main-card .main-text h4 {
       color: #808080; }
-    .main-card .main-text p {
-      color: #808080; }
+    .main-card .main-text h5 {
+      color: #808080;
+      opacity: .5; }
     .main-card .main-text a {
       text-decoration: none;
       color: #5C8AB0; }
@@ -98,13 +102,24 @@ body {
       width: 100%; }
   .people .person-text {
     float: left; }
-    .people .person-text h1 {
+    .people .person-text h2 {
+      color: #808080;
+      margin-top: 1em; }
+    .people .person-text h4 {
       color: #808080; }
-    .people .person-text p {
-      color: #808080; }
+    .people .person-text h5 {
+      color: #808080;
+      opacity: .5; }
     .people .person-text a {
       text-decoration: none;
       color: #5C8AB0; }
+  .people .person-icons {
+    float: right;
+    margin-right: 2em; }
+    .people .person-icons .material-icons {
+      color: #5C8AB0;
+      margin-right: .5em;
+      margin-top: 1em; }
 
 .view-more {
   width: 100%;
@@ -157,14 +172,23 @@ footer .footer {
     position: relative;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); }
+    transform: translate(-50%, -50%);
+    position: relative; }
+    .header-nav .search .search-icon {
+      position: absolute; }
   .header-nav .logo {
     float: left;
     width: 2em;
     margin: .5em; }
   .header-nav .menu {
     color: #808080;
-    float: left; }
+    float: left;
+    width: 2em;
+    margin: 1em; }
+  .header-nav .icons {
+    color: #808080;
+    float: right;
+    width: 25%; }
 
 @media (min-width: 900px) {
   .wrapper {
