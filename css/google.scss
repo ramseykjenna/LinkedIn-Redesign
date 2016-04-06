@@ -53,7 +53,7 @@ body {
     border: 1px solid #AAA;
     border-bottom: 3px solid #BBB;
     padding: 0px;
-    margin: 15px;
+    
     overflow: hidden;
     max-width: 960px;
     margin-top: 2em;
@@ -89,6 +89,9 @@ body {
             width: auto;
         }
     }
+    .main-icons {
+        color: $secondary;
+    }
 }
 
 .card {
@@ -102,6 +105,7 @@ body {
     margin-top: 2em;
     @include h-center;
     border-radius: 5px;
+    max-width: 960px;
     .tabs {
         background-color: $secondary;
         width: 100%;
@@ -161,6 +165,14 @@ body {
             margin-top: 1em;
         }
     }
+    .person-connections {
+        p {
+            color: $secondary;
+        }
+        img {
+            width: 5%;
+        }
+    }
 }
 
 
@@ -218,6 +230,7 @@ footer {
         position: relative;
         .search-icon {
             position: absolute;
+            
         }
     }
     .logo {
@@ -228,16 +241,33 @@ footer {
 }
 
     .menu {
-        color: $secondary;
         float: left;
-        width: 2em;
-        margin: 1em;
-      
+        margin-right: 1em;
+        position: relative;
+        height: 100%;
+        width: auto;
+        padding: 0 1em;
+        .material-icons {
+            margin: 0;
+            font-size: 2em;
+            @include v-center(absolute);
+        }
+        
+        
 }
     .icons {
         color: $secondary;
         float: right;
-        width: 25%;
+        height: 100%;
+        width: auto;
+        position: relative;
+            
+        .material-icons {
+            @include v-center(absolute);
+            
+        }
+       
+
 }
 
 
