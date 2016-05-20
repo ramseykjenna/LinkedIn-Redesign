@@ -1,0 +1,6 @@
+- genral alignment, spacing (padding) and clickability
+- rework colors to be brigher/more colorful
+-jQuery element (tabs and/or slide out menu)
+- fix search input
+- spacing on body edjes
+- 

@@ -1,5 +1,4 @@
---- 
-
+---
 ---
 
 <!--Version 2 of LinkedIn Dashboard Page
@@ -22,44 +21,62 @@
         <!--Any content underneath the front matter in a page that has layout: default will be inserted here-->
 
         <div class="main-card">
-            <div class="main-image">
-                <img src="/images/Screen%20Shot%202016-04-03%20at%204.19.00%20PM.png">
-            </div>
+
+                <img class="main-image" src="/images/Screen%20Shot%202016-04-03%20at%204.19.00%20PM.png">
+
             <div class="main-text">
                 <h1>Theodore Ramsey</h1>
                     <h4>Man's Best Friend at <a href="#">Ramsey's</a></h4>
                     <h5>K9 University</h5>
+                    <div class="edit">
+                         <i class="ion-edit"></i>
+                    <span>Edit profile</span>
+                    </div>
+
             </div>
-            <div class="main-icons">
-                <i class="material-icons">mode_edit</i>
-                <p>Edit profile</p>
-            </div>
+            <main class="main-news">
+                <div class="third">
+                    <span>24</span>
+                    <span class="grey">people viewed your profile</span>
+                </div>
+                <div class="third">
+                    <span>16</span>
+                    <span class="grey">connection requests</span>
+                </div>
+                <div class="third">
+                    <span>11</span>
+                    <span class="grey">inbox messages</span>
+                </div>
+            </main>
+
         </div>
 
 
         <div class="card">
             <div class="tabs">
                 <div class="tab"><span>Jobs</span></div>
-                <div class="tab"><span>People</span></div>
+                <div class="tab active"><span>People</span></div>
                 <div class="tab"><span>Following</span></div>
                 <div class="tab"><span>Events</span></div>
             </div>
             <div class="people">
                 <div class="person-image">
-                    <img src="/images/DavidLI.jpg"></div>
+                    <img src="/images/DavidLI.jpg">
+                    </div>
                 <div class="person-text">
                     <h2>David Ramsey</h2>
                     <h4>Developer at <a href="#">Atlas Wearables</a></h4>
                     <h5>University of Central Florida</h5>
                 </div>
                 <div class="person-icons">
-                    <i class="material-icons">visibility_off</i>
-                    <i class="material-icons">person_add</i>
+                    <i class="ion-eye-disabled"></i>
+                    <i class="ion-person-add"></i>
                 </div>
                 <div class="person-connections">
-                    <p>2 connections in common</p>
+
                     <img src="/images/DavidLI.jpg">
                     <img src="/images/KathrynLI.jpg">
+                    <p>2 connections in common</p>
                 </div>
             </div>
             <div class="people">
@@ -71,13 +88,14 @@
                     <h5>Pensacola Christian College</h5>
                 </div>
                 <div class="person-icons">
-                    <i class="material-icons">visibility_off</i>
-                    <i class="material-icons">person_add</i>
+                    <i class="ion-eye-disabled"></i>
+                    <i class="ion-person-add"></i>
                 </div>
                 <div class="person-connections">
-                    <p>2 connections in common</p>
+
                     <img src="/images/DavidLI.jpg">
                     <img src="/images/KathrynLI.jpg">
+                    <p>2 connections in common</p>
                 </div>
             </div>
             <div class="people">
@@ -85,17 +103,18 @@
                     <img src="/images/Screen%20Shot%202016-04-03%20at%208.19.45%20PM.png"></div>
                 <div class="person-text">
                     <h2>Jenna Ramsey</h2>
-                    <h4>Design/Development intern at <a href="#">Atlas Wearables</a></h4>
+                    <h4>UI/UX intern at <a href="#">Atlas Wearables</a></h4>
                     <h5>The Iron Yard</h5>
                 </div>
                 <div class="person-icons">
-                    <i class="material-icons">visibility_off</i>
-                    <i class="material-icons">person_add</i>
+                    <i class="ion-eye-disabled"></i>
+                    <i class="ion-person-add"></i>
                 </div>
                 <div class="person-connections">
-                    <p>2 connections in common</p>
+
                     <img src="/images/DavidLI.jpg">
                     <img src="/images/KathrynLI.jpg">
+                    <p>2 connections in common</p>
                 </div>
             </div>
             <div class="view-more">
@@ -103,12 +122,23 @@
             </div>
         </div>
 
-
-
-
-
-
     </div>
+
+    <div id="side-menu">
+        <ul>
+            <li><i class="ion-home"></i><span>Home</span></li>
+            <li><i class="ion-person"></i><span>Profile</span></li>
+            <li><i class="ion-ios-people"></i><span>Connections</span></li>
+            <li><i class="ion-archive"></i><span>Inbox</span></li>
+            <li><i class="ion-briefcase"></i><span>Jobs</span></li>
+        </ul>
+    </div>
+
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-2.2.3.min.js"   integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="   crossorigin="anonymous"></script>
+
+    <!-- menu js file -->
+    <script src="scripts/menu.js"></script>
 
     <!--This include tag adds /_includes/footer.html to every page that has layout: default in the front matter -->
     {% include footer.html %}
